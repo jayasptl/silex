@@ -1,0 +1,23 @@
+how to setup hosts file and virtual host
+
+C:\Windows\System32\drivers\etc => hosts
+
+Add following code
+
+127.0.0.1       guestbook.localhost.com
+
+D:\Xampp\apache\conf => httpd.conf
+
+Add following code
+
+# Use name-based virtual hosting.
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+	DocumentRoot D:/Xampp/htdocs/
+	ServerName localhost
+</VirtualHost>
+<VirtualHost *:80>
+	DocumentRoot D:/Xampp/htdocs/nakshi
+	ServerName guestbook.localhost.com
+</VirtualHost>
